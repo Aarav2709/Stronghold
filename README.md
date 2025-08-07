@@ -1,2 +1,2 @@
-# Cyberia
-The Official Repository for the SSVE's Interschool Competiton, Cyberia.
+# Stronghold
+The Official Repository for the SSVE's IT Club, Stronghold.
