@@ -1,0 +1,40 @@
+{
+  "name": "stronghold-website",
+  "version": "1.0.0",
+  "description": "Official website for Stronghold IT Club - Somerville School",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --host=localhost",
+    "build": "echo 'Static website - no build process required'",
+    "test": "echo 'No tests specified'",
+    "lint": "echo 'Linting HTML, CSS, and JS files'",
+    "deploy": "echo 'Ready for deployment'"
+  },
+  "keywords": [
+    "stronghold",
+    "it-club",
+    "somerville-school",
+    "student-website",
+    "technology",
+    "programming",
+    "hackathon"
+  ],
+  "author": "Stronghold IT Club",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stronghold-somerville/website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stronghold-somerville/website/issues"
+  },
+  "homepage": "https://stronghold-somerville.github.io/website",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

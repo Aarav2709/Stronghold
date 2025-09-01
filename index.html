@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stronghold</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-gray-50 font-inter text-gray-900 overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold text-red-600">Stronghold</h1>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="text-gray-600 hover:text-red-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
+                        <a href="#community" class="text-gray-600 hover:text-red-600 px-3 py-2 text-sm font-medium transition-colors">Community</a>
+                        <a href="#contact" class="text-gray-600 hover:text-red-600 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+                        <a href="#join" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-all text-sm font-medium">Join Us</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-red-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                <a href="#about" class="text-gray-600 hover:text-red-600 block px-3 py-2 text-base font-medium">About</a>
+                <a href="#community" class="text-gray-600 hover:text-red-600 block px-3 py-2 text-base font-medium">Community</a>
+                <a href="#contact" class="text-gray-600 hover:text-red-600 block px-3 py-2 text-base font-medium">Contact</a>
+                <a href="#join" class="bg-red-600 text-white block px-3 py-2 rounded-lg hover:bg-red-700 transition-all text-base font-medium mx-3 text-center">Join Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-16 bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute -top-40 -right-40 w-80 h-80 bg-red-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
+            <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-orange-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
+            <div class="absolute top-40 left-40 w-80 h-80 bg-yellow-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="space-y-8">
+                <h2 class="text-6xl md:text-8xl font-black text-gray-900 leading-tight">
+                    Welcome to
+                    <span class="text-red-600 block">Stronghold</span>
+                </h2>
+                <p class="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto font-medium leading-relaxed">
+                    Somerville School's Official IT Club — Where innovation meets collaboration.
+                </p>
+                <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+                    Join our community of passionate developers, designers, and tech enthusiasts building the future together.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+                    <a href="#join" class="bg-red-600 text-white px-8 py-4 rounded-xl hover:bg-red-700 transition-all text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        Join Stronghold
+                    </a>
+                    <a href="#community" class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl hover:border-red-600 hover:text-red-600 transition-all text-lg font-semibold">
+                        Explore Community
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section id="stats" class="bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="grid grid-cols-1 gap-8 text-center">
+                <div class="counter">
+                    <div class="text-3xl font-bold text-red-600" data-target="15">15</div>
+                    <div class="text-gray-600 text-sm font-medium">Volunteers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6">
+                    Discover the
+                    <span class="text-red-600">joy of code</span>,
+                    together.
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We are student innovators from Somerville School who code, design, and build together.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all">
+                    <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-code text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Build Projects</h3>
+                    <p class="text-gray-600">
+                        Build websites, mobile apps, games, or any other personal coding projects to showcase your skills and creativity.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all">
+                    <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-orange-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Connect with Builders</h3>
+                    <p class="text-gray-600">
+                        We gather both online and in-person to share our love of technology and make things together!
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-trophy text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Get Recognition</h3>
+                    <p class="text-gray-600">
+                        Participate in competitions, earn certifications, and win prizes to fuel your next creation.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Our Mission</h3>
+                    <p class="text-lg text-gray-600 mb-6">
+                        At Stronghold, we believe that technology should be accessible to everyone. We're building a community where students can learn, create, and innovate together, regardless of their experience level.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        From beginner-friendly workshops to advanced hackathons, we provide the resources, mentorship, and environment needed to turn your ideas into reality.
+                    </p>
+                    <a href="#join" class="inline-flex items-center bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-all font-semibold">
+                        Join Our Mission
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-gradient-to-br from-red-400 to-orange-400 rounded-2xl p-8 text-white">
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-laptop-code text-2xl mr-4"></i>
+                            <span class="text-lg font-semibold">Weekly Coding Sessions</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-chalkboard-teacher text-2xl mr-4"></i>
+                            <span class="text-lg font-semibold">Tech Workshops & Tutorials</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-rocket text-2xl mr-4"></i>
+                            <span class="text-lg font-semibold">Hackathons & Competitions</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-handshake text-2xl mr-4"></i>
+                            <span class="text-lg font-semibold">Industry Mentorship</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                    Find your
+                    <span class="text-red-600">community</span>
+                    at Stronghold
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Join a vibrant community of students who share your passion for technology and innovation.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Our Online Community</h3>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Coding doesn't have to be a solitary activity. At Stronghold, we make remarkable things together, and in our Discord server you'll find awesome people to collaborate with too.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Code together, find your programming community, dream up something wild, or just hang out in our lounge channels.
+                    </p>
+                    <div class="space-y-4">
+                        <a href="https://discord.gg/DtGP2MkSNx" class="inline-flex items-center bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-all font-semibold mr-4">
+                            <i class="fab fa-discord mr-2"></i>
+                            Join our Discord
+                        </a>
+                        <a href="https://github.com/Aarav2709/Stronghold" class="inline-flex items-center border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:border-red-600 hover:text-red-600 transition-all font-semibold">
+                            <i class="fab fa-github mr-2"></i>
+                            GitHub Repository
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-comments text-red-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Daily Discussions</h4>
+                                <p class="text-sm text-gray-600">Share ideas, get help, and collaborate.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-video text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Virtual Workshops</h4>
+                                <p class="text-sm text-gray-600">Learn new technologies together.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-handshake text-yellow-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Peer Mentoring</h4>
+                                <p class="text-sm text-gray-600">Support each other's growth.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-gamepad text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Fun Activities</h4>
+                                <p class="text-sm text-gray-600">Gaming nights and social events.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Events Section -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg mb-16">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8">Upcoming Events</h3>
+                <div class="max-w-lg mx-auto">
+                    <div class="border border-gray-200 rounded-xl p-8 hover:shadow-md transition-all text-center">
+                        <div class="flex items-center justify-center mb-6">
+                            <span class="bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-medium">Interschool Event</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-900 mb-4">Singularity</h4>
+                        <p class="text-gray-600 mb-6">Our flagship interschool technology event bringing together the brightest minds to compete, collaborate, and innovate.</p>
+                        <a href="pages/singularity.html" class="inline-flex items-center bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-all font-semibold">
+                            <i class="fas fa-external-link-alt mr-2"></i>
+                            Visit Singularity's Website
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                    Get in
+                    <span class="text-red-600">touch</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Ready to join our community? Have questions? We'd love to hear from you!
+                </p>
+            </div>
+
+            <div class="max-w-2xl mx-auto">
+                <!-- Contact Form -->
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Send us a message</h3>
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                                <input type="text" id="firstName" name="firstName" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all">
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                            <select id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all">
+                                <option>General Inquiry</option>
+                                <option>Join Stronghold</option>
+                                <option>Workshop Information</option>
+                                <option>Collaboration</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all" placeholder="Tell us about yourself and why you're interested in Stronghold..."></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-all font-semibold text-lg">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section id="join" class="py-20 bg-gradient-to-br from-red-500 via-orange-500 to-yellow-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="space-y-8">
+                <h2 class="text-4xl md:text-6xl font-black text-white leading-tight">
+                    Ready to join
+                    <span class="block">Stronghold?</span>
+                </h2>
+                <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
+                    Start your journey with us today. No experience required - just bring your curiosity and passion for technology.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+                    <a href="#contact" class="bg-white text-red-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        Join Stronghold Today
+                    </a>
+                    <a href="#about" class="border-2 border-white/30 text-white px-8 py-4 rounded-xl hover:bg-white/10 transition-all text-lg font-semibold">
+                        Learn More About Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-red-400 mb-4">Stronghold</h3>
+                    <p class="text-gray-300 mb-6 max-w-md mx-auto">
+                        Somerville School's Official IT Club. Building the future of technology, one project at a time.
+                    </p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="https://github.com/Aarav2709/Stronghold" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-red-600 transition-all">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://discord.gg/DtGP2MkSNx" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-all">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <div class="flex justify-center">
+                        <ul class="flex space-x-8">
+                            <li><a href="#about" class="text-gray-300 hover:text-red-400 transition-colors">About Us</a></li>
+                            <li><a href="#community" class="text-gray-300 hover:text-red-400 transition-colors">Community</a></li>
+                            <li><a href="#contact" class="text-gray-300 hover:text-red-400 transition-colors">Contact</a></li>
+                            <li><a href="#join" class="text-gray-300 hover:text-red-400 transition-colors">Join Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400 text-sm mb-2">
+                    © 2025 Stronghold IT Club, Somerville School. All rights reserved.
+                </p>
+                <p class="text-gray-400 text-sm">
+                    Built with ❤️ by Stronghold Members
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
